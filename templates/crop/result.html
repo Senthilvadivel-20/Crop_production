@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Reuslt
+        </title>
+
+        
+
+    </head>
+
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <p>The Total production is: {{production}}</p>
+
+
+
+            <br><br>
+        
+
+        <a href="{% url 'home'%}"><button>Back to Home</button></a>
+        <a href="{% url 'dist_crop_stats'%}"><button>See District Crop stats</button></a>
+        <a href="{% url 'dist_season_stats'%}"><button>See Season stats</button></a>
+        <a href="{% url 'season_crop_stats'%}"><button>See Season Crop stats</button></a>
+        <a href="{% url 'general_crop_stats'%}"><button>See General crop stats</button></a>
+
+    </body>
+
+</html>

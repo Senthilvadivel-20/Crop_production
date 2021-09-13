@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <title>
+            TN Crop
+        </title>
+
+    </head>
+
+    <body>
+       
+        <form action="{% url 'result' %}" method="POST">
+
+            {% csrf_token %}
+
+            <label for="district">Enter District Name: </label>
+            <select name="district" id="district">
+                <option value="ARIYALUR">ARIYALUR</option>
+                <option value="COIMBATORE">COIMBATORE</option>
+                <option value="CUDDALORE">CUDDALORE</option>
+                <option value="DHARMAPURI">DHARMAPURI</option>
+                <option value="DINDIGUL">DINDIGUL</option>
+                <option value="ERODE">ERODE</option>
+                <option value="KANCHIPURAM">KANCHIPURAM</option>
+                <option value="KANNIYAKUMARI">KANNIYAKUMARI</option>
+                <option value="KARUR">KARUR</option>
+                <option value="KRISHNAGIRI">KRISHNAGIRI</option>
+                <option value="MADURAI">MADURAI</option>
+                <option value="NAGAPATTINAM">NAGAPATTINAM</option>
+                <option value="NAMAKKAL">NAMAKKAL</option>
+                <option value="PERAMBALUR">PERAMBALUR</option>
+                <option value="PUDUKKOTTAI">PUDUKKOTTAI</option>
+                <option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+                <option value="SALEM">SALEM</option>
+                <option value="SIVAGANGA">SIVAGANGA</option>
+                <option value="THANJAVUR">THANJAVUR</option>
+                <option value="THE NILGIRIS">THE NILGIRIS</option>
+                <option value="THENI">THENI</option>
+                <option value="THIRUVALLUR">THIRUVALLUR</option>
+                <option value="THIRUVARUR">THIRUVARUR</option>
+                <option value="TIRUCHIRAPPALLI">TIRUCHIRAPPALLI</option>
+                <option value="TIRUNELVELI">TIRUNELVELI</option>
+                <option value="TIRUPPUR">TIRUPPUR</option>
+                <option value="TIRUVANNAMALAI">TIRUVANNAMALAI</option>
+                <option value="TUTICORIN">TUTICORIN</option>
+                <option value="VELLORE">VELLORE</option>
+                <option value="VILLUPURAM">VILLUPURAM</option>
+                <option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+            </select>
+
+            <br><br>
+
+            <label for="year">Enter Crop Year: </label>
+            <input name="year" id="year" type="number" required/>
+
+            <br><br>
+
+
+            <label for="season">Select season: </label>
+            <select name="season" id="season">
+                <option value="Kharif">Kharif</option>
+                <option value="Whole Year">Whole Year</option>
+                <option value="Rabi">Rabi</option>
+            </select>
+
+            <br><br>
+
+
+            <label for="crop_name">Select Crop: </label>
+            <select name="crop_name" id="crop_name" >
+                <option value="Apple">Apple</option>
+                <option value="Arecanut">Arecanut</option>
+                <option value="Arhar/Tur">Arhar/Tur</option>
+                <option value="Ash Gourd">Ash Gourd</option>
+                <option value="Bajra">Bajra</option>
+                <option value="Banana">Banana</option>
+                <option value="Beans & Mutter(Vegetable)">Beans & Mutter(Vegetable)</option>
+                <option value="Beet Root">Beet Root</option>
+                <option value="Ber">Ber</option>
+                <option value="Bhindi">Bhindi</option>
+                <option value="Bitter Gourd">Bitter Gourd</option>
+                <option value="Black pepper">Black pepper</option>
+                <option value="Bottle Gourd">Bottle Gourd</option>
+                <option value="Brinjal">Brinjal</option>
+                <option value="Cabbage">Cabbage</option>
+                <option value="Cardamom">Cardamom</option>
+                <option value="Carrot">Carrot</option>
+                <option value="Cashewnut">Cashewnut</option>
+                <option value="Castor seed">Castor seed</option>
+                <option value="Cauliflower">Cauliflower</option>
+                <option value="Citrus Fruit">Citrus Fruit</option>
+                <option value="Coconut">Coconut</option>
+                <option value="Coriander">Coriander</option>
+                <option value="Cotton(lint)">Cotton(lint)</option>
+                <option value="Cucumber">Cucumber</option>
+                <option value="Drum Stick">Drum Stick</option>
+                <option value="Dry chillies">Dry chillies</option>
+                <option value="Dry ginger">Dry ginger</option>
+                <option value="Garlic">Garlic</option>
+                <option value="Gram">Gram</option>
+                <option value="Grapes">Grapes</option>
+                <option value="Groundnut">Groundnut</option>
+                <option value="Guar seed">Guar seed</option>
+                <option value="Horse-gram">Horse-gram</option>
+                <option value="Jack Fruit">Jack Fruit</option>
+                <option value="Jowar">Jowar</option>
+                <option value="Korra">Korra</option>
+                <option value="Lab-Lab">Lab-Lab</option>
+                <option value="Litchi">Litchi</option>
+                <option value="Maize">Maize</option>
+                <option value="Mango">Mango</option>
+                <option value="Mesta">Mesta</option>
+                <option value="Moong(Green Gram)">Moong(Green Gram)</option>
+                <option value="Onion">Onion</option>
+                <option value="Orange">Orange</option>
+                <option value="Other Cereals & Millets">Other Cereals & Millets</option>
+                <option value="Other Citrus Fruit">Other Citrus Fruit</option>
+                <option value="Other Fresh Fruits">Other Fresh Fruits</option>
+                <option value="Other Kharif pulses">Other Kharif pulses</option>
+                <option value="Other Vegetables">Other Vegetables</option>
+                <option value="Papaya">Papaya</option>
+                <option value="Peach">Peach</option>
+                <option value="Pear">Pear</option>
+                <option value="Pineapple">Pineapple</option>
+                <option value="Plums">Plums</option>
+                <option value="Pome Fruit">Pome Fruit</option>
+                <option value="Pome Granet">Pome Granet</option>
+                <option value="Potato">Potato</option>
+                <option value="Pulses total">Pulses total</option>
+                <option value="Pump Kin">Pump Kin</option>
+                <option value="Ragi">Ragi</option>
+                <option value="Rapeseed &Mustard">Rapeseed &Mustard</option>
+                <option value="Redish">Redish</option>
+                <option value="Ribed Guard">Ribed Guard</option>
+                <option value="Rice">Rice</option>
+                <option value="Samai">Samai</option>
+                <option value="Sannhamp">Sannhamp</option>
+                <option value="Sesamum">Sesamum</option>
+                <option value="Small millets">Small millets</option>
+                <option value="Snak Guard">Snak Guard</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Sunflower">Sunflower</option>
+                <option value="Sweet potato">Sweet potato</option>
+                <option value="Tapioca">Tapioca</option>
+                <option value="Tobacco">Tobacco</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Total foodgrain">Total foodgrain</option>
+                <option value="Turmeric">Turmeric</option>
+                <option value="Turnip">Turnip</option>
+                <option value="Urad">Urad</option>
+                <option value="Varagu">Varagu</option>
+                <option value="Water Melon">Water Melon</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Yam">Yam</option>
+            </select>
+
+            <br><br>
+
+            <label for="area">Enter Area: </label>
+            <input type="number" name="area" id="area" required />
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </body>
+
+    </html>

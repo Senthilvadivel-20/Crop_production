@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Crop Statistics
+    </title>
+
+    <!-- <style>
+        table,th,td{
+            border: 1px solid rgba(5, 5, 5, 0.342);
+            border-collapse: collapse;
+        }
+    </style> -->
+
+</head>
+
+<body>
+
+{%if dist_detail%}
+
+    <table style="width: 45%;">
+        <tr>
+            <th>District</th>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Crop</th>
+            <th>Area</th>
+            <th>Production</th>
+        </tr>
+            {% for i in dist_detail %}
+            <tr>
+                <td>{{i.dist}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.season}}</td>
+                <td>{{i.crop}}</td>
+                <td>{{i.area}}</td>
+                <td>{{i.production}}</td>
+            </tr>
+
+            {%endfor%}
+        
+        
+        </table>
+
+    {%else%}
+        <p>No data available {{crp}}</p>
+
+        {%endif%}
+
+<a href="{% url 'home'%}"><button>Back to Home</button></a>
+<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+
+</body>
+
+</html>
