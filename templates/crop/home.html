@@ -1,7 +1,11 @@
+{% load static %}     <!-- ----------Note this------------------- -->
+
 <!DOCTYPE html>
 
 <html>
     <head>
+
+        <link href="{% static '\crop\css\home.css'%}" rel="stylesheet">      <!-- ----------Note this------------------- -->
 
         <title>
             TN Crop
@@ -11,11 +15,16 @@
 
     <body>
        
+        <h1>Crop Production Estimation</h1>
+
+
+        <div class="form_sec">
+
         <form action="{% url 'result' %}" method="POST">
 
             {% csrf_token %}
 
-            <label for="district">Enter District Name: </label>
+            <label for="district">Enter District Name: </label><br>
             <select name="district" id="district">
                 <option value="ARIYALUR">ARIYALUR</option>
                 <option value="COIMBATORE">COIMBATORE</option>
@@ -52,13 +61,13 @@
 
             <br><br>
 
-            <label for="year">Enter Crop Year: </label>
+            <label for="year">Enter Crop Year: </label><br>
             <input name="year" id="year" type="number" required/>
 
             <br><br>
 
 
-            <label for="season">Select season: </label>
+            <label for="season">Select season: </label><br>
             <select name="season" id="season">
                 <option value="Kharif">Kharif</option>
                 <option value="Whole Year">Whole Year</option>
@@ -68,7 +77,7 @@
             <br><br>
 
 
-            <label for="crop_name">Select Crop: </label>
+            <label for="crop_name">Select Crop: </label><br>
             <select name="crop_name" id="crop_name" >
                 <option value="Apple">Apple</option>
                 <option value="Arecanut">Arecanut</option>
@@ -158,7 +167,7 @@
 
             <br><br>
 
-            <label for="area">Enter Area: </label>
+            <label for="area">Enter Area: </label><br>
             <input type="number" name="area" id="area" required />
 
             <br><br>
@@ -166,6 +175,8 @@
             <input type="submit" value="Submit">
 
         </form>
+
+    </div>
 
     </body>
 

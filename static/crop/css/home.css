@@ -1,0 +1,32 @@
+*{
+    margin: opx;
+}
+
+body{
+    background-image: url('https://image.freepik.com/free-vector/flat-design-farm-landscape-background_52683-12569.jpg');
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form label {
+    color: black    ;
+    font-size: x-large;
+}
+
+
+.form_sec {
+    margin: 5% 450px;
+    padding: 30px 50px;
+    background-color: rgba(240, 248, 255, 0.301);
+    border-radius: 20px;
+}
+
+.form_sec label{
+    font-weight: bolder;
+    color: black;
+}
+
+.form_sec:hover{
+    background-color: rgb(53, 197, 125, 0.6);
+}

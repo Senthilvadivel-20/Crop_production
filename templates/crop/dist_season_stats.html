@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html>
@@ -6,17 +8,13 @@
     <title>
         Crop Statistics
     </title>
-
-    <!-- <style>
-        table,th,td{
-            border: 1px solid rgba(5, 5, 5, 0.342);
-            border-collapse: collapse;
-        }
-    </style> -->
-
+    <link rel="stylesheet" href="{% static 'crop\css\stats.css' %}">
 </head>
 
 <body>
+
+
+    <h1>{{dist}}'s {{ssn}} Statistics</h1>
 
 {%if dist_detail%}
 

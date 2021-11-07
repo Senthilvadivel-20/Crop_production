@@ -1,13 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html>
 
 <head>
+
+    <link rel="stylesheet" href="{% static 'crop\css\stats.css' %}">
+    
     <title>
         Crop Statistics
     </title>
-
-    <!-- <style>
+<!-- 
+    <style>
         table,th,td{
             border: 1px solid rgba(5, 5, 5, 0.342);
             border-collapse: collapse;
@@ -17,6 +22,10 @@
 </head>
 
 <body>
+
+    <h1>{{dist}}'s {{crp}} Statistics</h1>
+
+    <div class="Data_table">
 
 {%if dist_detail%}
 
@@ -48,6 +57,8 @@
         <p>{{dist}} haven't Cultivation the {{crp}}</p>
 
         {%endif%}
+
+    </div>
 
 <a href="{% url 'home'%}"><button>Back to Home</button></a>
 <input type=button value="Previous Page" onClick="javascript:history.go(-1);">
